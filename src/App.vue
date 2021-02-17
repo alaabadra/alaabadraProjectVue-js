@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <b-nav tabs align="center" class="mt-3">
+      <b-nav-item active to="/">Home</b-nav-item>
+      <b-nav-item to="/about">About</b-nav-item>
+      <b-nav-item to="/extra">Extra</b-nav-item>
+    </b-nav>
     <router-view />
   </div>
 </template>
