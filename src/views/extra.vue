@@ -41,7 +41,6 @@
               placeholder="Company Website"
             />
           </div>
-          <!--/////-->
           <div class="col-sm-8 ml-auto row">
             <input
               type="text"
@@ -60,7 +59,7 @@
             />
           </div>
         </div>
-        <!--/////-->
+
         <label class="col-sm-8 mr-auto text-left mt-3 hw">
           Oportunity Information
         </label>
@@ -81,7 +80,7 @@
           v-model="content"
           class="col-sm-9 mr-auto mt-3 p-0 mb-5"
         ></vue-editor>
-        <!--/////-->
+
         <label class="col-sm-8 mr-auto text-left mt-5 hw">
           Oportunity Information
         </label>
@@ -92,10 +91,8 @@
         >
           add new
         </button>
-        <div class="col-sm-9 mr-auto row mt-3 customRow2">
-          <!-- //// -->
-        </div>
-        <!--/////-->
+        <div class="col-sm-9 mr-auto row mt-3 customRow2"></div>
+
         <label class="col-sm-8 mr-auto text-left mt-5 hw">
           Oportunity Resources
         </label>
@@ -164,9 +161,7 @@ export default {
         if (this.$refs.fileName) {
           this.$refs.fileName.innerHTML = this.file.name;
         }
-        reader.addEventListener("load", () => {
-          //    = e.target.result;
-        });
+        reader.addEventListener("load", () => {});
         reader.readAsDataURL(this.file);
       });
     },
@@ -175,26 +170,26 @@ export default {
         child1 = document.createElement("div"),
         child = ` 
           <div class="input-group col-sm-3 mx-auto p-0 rounded-lg">
-           <div class="input-group-prepend">
-             <button class="btn btn-outline-primary" type="button""
-              id="button-addon1"><i class="fas fa-plus-circle fa-lg"></i></button>
-             </div>
-          <input type="text"  list="i1"
-           class="form-control chunck" 
-           placeholder="" 
-           aria-label="Example text with button addon"
-            aria-describedby="button-addon1"
-            id="chunk"
-            ref="choose">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-primary" type="button""
+                id="button-addon1"><i class="fas fa-plus-circle fa-lg"></i></button>
+            </div>
+            <input type="text"  list="i1"
+            class="form-control chunck" 
+            placeholder="" 
+            aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+              id="chunk"
+              ref="choose">
           </div>
           <datalist id="i1">
             
           </datalist>
-          <!-- //// -->
+
           <input list="i2" class="col-sm-3 mx-auto form-control rounded-lg" />
 
           <datalist id="i2"> </datalist>
-          <!-- //// -->
+
           <input list="i3" class="col-sm-3 mx-auto form-control rounded-lg" />
 
           <datalist id="i3">
@@ -236,33 +231,34 @@ export default {
         el = document.createElement("div");
       el.setAttribute("class", "col-sm-12 mx-auto row");
       row.appendChild(el);
-      el.innerHTML = `<select
-              name=""
-              id=""
-              class="col-sm-3 mx-auto form-control"
-              v-model="option1"
-            >
-              <option value="Excutive Summary">Excutive Summary</option>
-              <option value="Power Point Presentation"
-                >Power Point Presentation</option
-              >
-              <option value="PPM & Sub Docs">PPM & Sub Docs</option>
-            </select>
-            <select
-              name=""
-              id=""
-              class="col-sm-3 mx-auto form-control"
-              v-model="option2"
-            >
-              <option value="All Members">All Members</option>
-              <option value="NDA Only">NDA Only</option>
-              <option value="Investors">Investors</option>
-            </select>
-            <div
-              class="col-sm-4 rounded-pill form-control mx-auto bg-light cust"
-              ref="fileName"
-              style="font-size: .8rem"
-            >${val.name}</div>`;
+      el.innerHTML = `
+        <select
+          name=""
+          id=""
+          class="col-sm-3 mx-auto form-control"
+          v-model="option1"
+        >
+          <option value="Excutive Summary">Excutive Summary</option>
+          <option value="Power Point Presentation"
+            >Power Point Presentation</option
+          >
+          <option value="PPM & Sub Docs">PPM & Sub Docs</option>
+        </select>
+        <select
+          name=""
+          id=""
+          class="col-sm-3 mx-auto form-control"
+          v-model="option2"
+        >
+          <option value="All Members">All Members</option>
+          <option value="NDA Only">NDA Only</option>
+          <option value="Investors">Investors</option>
+        </select>
+        <div
+          class="col-sm-4 rounded-pill form-control mx-auto bg-light cust"
+          ref="fileName"
+          style="font-size: .8rem"
+        >${val.name}</div>`;
       setTimeout(() => {
         let cust = document.querySelector(".cust");
         cust.addEventListener("click", () => {
